@@ -1,0 +1,22 @@
+{% extends "genome/base.html" %}
+{% load static %}
+
+{% block title %}Annotation{% endblock %}
+
+{% block content %}
+    <h2>Annotation - Podabacia crustacea</h2>
+
+    <p>这里提供 <em>Podabacia crustacea</em> 的基因组注释文件（GFF3 格式）下载。</p>
+
+    <p>点击下面按钮下载：</p>
+
+    <a href="{% static 'annotation/Podabacia_crustacea_annotation.gff3' %}" download>
+        <button>Download Annotation (GFF3)</button>
+    </a>
+
+    <p style="margin-top: 1em; font-size: 0.9em;">
+        提示：文件可能较大，下载时间取决于网络速度。
+    </p>
+{% endblock %}
+
+

@@ -1,0 +1,4 @@
+gene_id	scaffold	start	end	strand	product
+PCRU_G0001	scaffold_1	1000	2000	+	heat shock protein
+PCRU_G0002	scaffold_1	5000	5800	-	transcription factor
+PCRU_G0003	scaffold_2	300	900	+	unknown protein

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ gene.gene_id }} - CoralDB</title>
+</head>
+<body>
+    <h1>{{ gene.gene_id }}</h1>
+    <ul>
+        <li><strong>Species:</strong> {{ gene.species.name }} ({{ gene.species.abbrev }})</li>
+        <li><strong>Scaffold:</strong> {{ gene.scaffold }}</li>
+        <li><strong>Position:</strong> {{ gene.start }} - {{ gene.end }} ({{ gene.strand }})</li>
+        <li><strong>Product:</strong> {{ gene.product }}</li>
+    </ul>
+
+    <p><a href="{% url 'gene_list' %}">Back to gene list</a></p>
+</body>
+</html>
+

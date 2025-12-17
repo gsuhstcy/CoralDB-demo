@@ -1,0 +1,18 @@
+{% extends "genome/base.html" %}
+{% load static %}
+
+{% block title %}Genome{% endblock %}
+
+{% block content %}
+    <h2>Genome - Podabacia crustacea</h2>
+    <p>这里将提供 <em>Podabacia crustacea</em> 参考基因组序列（FASTA）下载。</p>
+
+    <!-- 下一步我们会把这个 TODO 换成真正的下载链接 -->
+    <p>点击下面按钮下载 <em>Podabacia crustacea</em> 参考基因组：</p>
+
+<a href="{% static 'genome/Podabacia_crustacea_genome.fa' %}" download>
+    <button>Download Genome (FASTA)</button>
+</a>
+
+{% endblock %}
+

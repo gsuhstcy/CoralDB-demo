@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CoralDB - {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <!-- 顶部标题 -->
+    <header>
+        <h1>CoralDB</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a> |
+        </nav>
+        <hr>
+    </header>
+
+    <!-- 每个页面自己的内容 -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CoralDB - Species List</title>
+</head>
+<body>
+    <h1>Species in CoralDB</h1>
+    <ul>
+        {% for s in species_list %}
+            <li>{{ s.abbrev }} — {{ s.name }}</li>
+        {% empty %}
+            <li>No species in database yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

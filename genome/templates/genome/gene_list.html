@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CoralDB - Gene List</title>
+</head>
+<body>
+    <h1>Gene List</h1>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Gene ID</th>
+            <th>Species</th>
+            <th>Scaffold</th>
+            <th>Start</th>
+            <th>End</th>
+        </tr>
+        {% for g in genes %}
+        <tr>
+            <td><a href="{% url 'gene_detail' g.gene_id %}">{{ g.gene_id }}</a></td>
+            <td>{{ g.species.abbrev }}</td>
+            <td>{{ g.scaffold }}</td>
+            <td>{{ g.start }}</td>
+            <td>{{ g.end }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

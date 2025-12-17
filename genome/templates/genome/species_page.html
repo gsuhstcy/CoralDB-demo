@@ -1,0 +1,41 @@
+{% extends "genome/base.html" %}
+{% load static %}
+
+{% block title %}Species{% endblock %}
+
+{% block content %}
+    <h2>Species - Podabacia crustacea</h2>
+
+    <h3>Taxonomy</h3>
+    <ul>
+        <li>Kingdom: Animalia</li>
+        <li>Phylum: Cnidaria</li>
+        <li>Class: Anthozoa</li>
+        <li>Order: Scleractinia</li>
+        <li>Family: Fungiidae</li>
+        <li>Genus: Podabacia</li>
+        <li>Species: <em>Podabacia crustacea</em></li>
+    </ul>
+
+<h3>Photo</h3>
+<p>Representative photos of <em>Podabacia crustacea</em>:</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 15px;">
+    <img src="{% static 'species/pcsk.jpg' %}" 
+         alt="pcsk"
+         style="width: 45%; border: 1px solid #ccc;">
+
+    <img src="{% static 'species/pcsk2.jpg' %}" 
+         alt="pcsk2"
+         style="width: 45%; border: 1px solid #ccc;">
+
+    <img src="{% static 'species/pc.jpg' %}" 
+         alt="pc"
+         style="width: 45%; border: 1px solid #ccc;">
+
+    <img src="{% static 'species/pc2.jpg' %}" 
+         alt="pc2"
+         style="width: 45%; border: 1px solid #ccc;">
+</div>
+
+{% endblock %}

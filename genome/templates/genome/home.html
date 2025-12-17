@@ -1,0 +1,81 @@
+{% extends "genome/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="cdb-container">
+
+  <div class="cdb-top">
+    <h1 class="cdb-h1">CoralDB</h1>
+
+    <form method="get" class="cdb-search">
+      <input name="q" value="{{ q }}" placeholder="Search species..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <h2 class="cdb-h2">Best genomes</h2>
+  <div class="cdb-grid">
+    {% for sp in best %}
+      <a class="cdb-card" href="{% url 'species_detail' sp.slug %}">
+        <img class="cdb-img" src="{{ sp.cover_image.url }}" alt="{{ sp.scientific_name }}">
+        <div class="cdb-card-body">
+          <div class="cdb-title">{{ sp.scientific_name }}</div>
+          {% if sp.common_name %}<div class="cdb-sub">{{ sp.common_name }}</div>{% endif %}
+        </div>
+      </a>
+    {% empty %}
+      <p>No species in this group.</p>
+    {% endfor %}
+  </div>
+
+  <h2 class="cdb-h2">Upcoming</h2>
+  <div class="cdb-grid">
+    {% for sp in upcoming %}
+      <a class="cdb-card" href="{% url 'species_detail' sp.slug %}">
+        <img class="cdb-img" src="{{ sp.cover_image.url }}" alt="{{ sp.scientific_name }}">
+        <div class="cdb-card-body">
+          <div class="cdb-title">{{ sp.scientific_name }}</div>
+          {% if sp.common_name %}<div class="cdb-sub">{{ sp.common_name }}</div>{% endif %}
+        </div>
+      </a>
+    {% empty %}
+      <p>No species in this group.</p>
+    {% endfor %}
+  </div>
+
+  <h2 class="cdb-h2">Public</h2>
+  <div class="cdb-grid">
+    {% for sp in public %}
+      <a class="cdb-card" href="{% url 'species_detail' sp.slug %}">
+        <img class="cdb-img" src="{{ sp.cover_image.url }}" alt="{{ sp.scientific_name }}">
+        <div class="cdb-card-body">
+          <div class="cdb-title">{{ sp.scientific_name }}</div>
+          {% if sp.common_name %}<div class="cdb-sub">{{ sp.common_name }}</div>{% endif %}
+        </div>
+      </a>
+    {% empty %}
+      <p>No species in this group.</p>
+    {% endfor %}
+  </div>
+
+</div>
+
+<style>
+  .cdb-container{max-width:1100px;margin:0 auto;padding:24px;}
+  .cdb-top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .cdb-h1{margin:0;}
+  .cdb-h2{margin-top:28px;}
+  .cdb-search{display:flex;gap:8px;align-items:center;}
+  .cdb-search input{padding:8px 10px;min-width:260px;}
+  .cdb-search button{padding:8px 12px;cursor:pointer;}
+  .cdb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
+  .cdb-card{display:block;border:1px solid #e6e6e6;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;}
+  .cdb-img{width:100%;height:170px;object-fit:cover;display:block;}
+  .cdb-card-body{padding:10px 12px;}
+  .cdb-title{font-weight:700;}
+  .cdb-sub{opacity:0.75;font-size:13px;margin-top:4px;}
+</style>
+{% endblock %}
+
