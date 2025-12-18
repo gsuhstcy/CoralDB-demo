@@ -11,7 +11,8 @@ class ResourceInline(admin.TabularInline):
 class SpeciesAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("scientific_name",)}
     inlines = [ResourceInline]
-    list_display = ("scientific_name", "group", "is_public")
+    list_display = ("scientific_name", "static_image", "group", "is_public")
+
 
 
 @admin.register(ResourceFile)
