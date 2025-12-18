@@ -7,6 +7,12 @@ class Species(models.Model):
     slug = models.SlugField(max_length=220, unique=True)
 
     cover_image = models.ImageField(upload_to="species/covers/", blank=True, null=True)
+    static_image = models.CharField(
+    max_length=200,
+    blank=True,
+    help_text="Path under static/, e.g. species/podabacia_crustacea.jpg"
+)
+
     short_desc = models.TextField(blank=True)
 
     # taxonomy（先用字段，后期你想做树再升级）
