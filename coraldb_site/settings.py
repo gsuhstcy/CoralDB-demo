@@ -23,7 +23,7 @@ SECRET_KEY = os.environ.get(
 
 # Debug
 # Render 默认不设置 DEBUG，所以这里会是 False
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
 
 # Demo 阶段放开，后期收紧成你的 Render 域名
 ALLOWED_HOSTS = ["*"]

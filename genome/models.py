@@ -13,6 +13,7 @@ class Species(models.Model):
     help_text="Path under static/, e.g. species/podabacia_crustacea.jpg"
 )
 
+
     short_desc = models.TextField(blank=True)
 
     # taxonomy（先用字段，后期你想做树再升级）
@@ -61,3 +62,27 @@ class ResourceFile(models.Model):
 
     def __str__(self):
         return f"{self.species.scientific_name} - {self.label}"
+
+
+class SpeciesImage(models.Model):
+    species = models.ForeignKey(
+        Species,
+        on_delete=models.CASCADE,
+        related_name="images"
+    )
+
+    static_image = models.CharField(
+        max_length=200,
+        help_text="Path under static/, e.g. species/tubastraea_1.jpg"
+    )
+
+    caption = models.CharField(
+        max_length=200,
+        blank=True,
+        help_text="Optional description of the image"
+    )
+
+    order = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.species.scientific_name} image {self.order}"
