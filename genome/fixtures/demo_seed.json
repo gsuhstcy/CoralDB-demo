@@ -66,6 +66,86 @@
   }
 },
 {
+  "model": "genome.speciesimage",
+  "pk": 1,
+  "fields": {
+    "species": 1,
+    "static_image": "species/podabacia_crustacea2.jpg",
+    "caption": "Colony morphology",
+    "order": 1
+  }
+},
+{
+  "model": "genome.speciesimage",
+  "pk": 2,
+  "fields": {
+    "species": 1,
+    "static_image": "species/podabacia_crustacea3.jpg",
+    "caption": "Polyp close-up",
+    "order": 2
+  }
+},
+{
+  "model": "genome.speciesimage",
+  "pk": 3,
+  "fields": {
+    "species": 1,
+    "static_image": "species/podabacia_crustacea4.jpg",
+    "caption": "Polyp close-up",
+    "order": 2
+  }
+},
+{
+  "model": "genome.speciesimage",
+  "pk": 4,
+  "fields": {
+    "species": 1,
+    "static_image": "species/podabacia_crustaceacell.jpg",
+    "caption": "Polyp close-up",
+    "order": 2
+  }
+},
+{
+  "model": "genome.speciesimage",
+  "pk": 5,
+  "fields": {
+    "species": 2,
+    "static_image": "species/tubastraea_coccinea2.jpg",
+    "caption": "Colony morphology",
+    "order": 1
+  }
+},
+{
+  "model": "genome.speciesimage",
+  "pk": 6,
+  "fields": {
+    "species": 2,
+    "static_image": "species/tubastraea_coccinea3.jpg",
+    "caption": "Polyp close-up",
+    "order": 2
+  }
+},
+{
+  "model": "genome.speciesimage",
+  "pk": 7,
+  "fields": {
+    "species": 2,
+    "static_image": "species/tubastraea_coccineacell.jpg",
+    "caption": "Polyp close-up",
+    "order": 2
+  }
+},
+{
+  "model": "genome.speciesimage",
+  "pk": 8,
+  "fields": {
+    "species": 3,
+    "static_image": "species/acropora_intermedia2.jpg",
+    "caption": "Colony morphology",
+    "order": 1
+  }
+},
+{
   "model": "genome.resourcefile",
   "pk": 1,
   "fields": {
