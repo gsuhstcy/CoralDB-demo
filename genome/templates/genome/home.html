@@ -19,10 +19,26 @@
   <div class="cdb-grid">
     {% for sp in best %}
       <a class="cdb-card" href="{% url 'species_detail' sp.slug %}">
-        <img class="cdb-img" src="{{ sp.cover_image.url }}" alt="{{ sp.scientific_name }}">
+
+        {% if sp.static_image %}
+          <img class="cdb-img"
+               src="{% static sp.static_image %}"
+               alt="{{ sp.scientific_name }}">
+        {% elif sp.cover_image and sp.cover_image.name %}
+          <img class="cdb-img"
+               src="{{ sp.cover_image.url }}"
+               alt="{{ sp.scientific_name }}">
+        {% else %}
+          <img class="cdb-img"
+               src="{% static 'species/placeholder.jpg' %}"
+               alt="No image">
+        {% endif %}
+
         <div class="cdb-card-body">
           <div class="cdb-title">{{ sp.scientific_name }}</div>
-          {% if sp.common_name %}<div class="cdb-sub">{{ sp.common_name }}</div>{% endif %}
+          {% if sp.common_name %}
+            <div class="cdb-sub">{{ sp.common_name }}</div>
+          {% endif %}
         </div>
       </a>
     {% empty %}
@@ -34,10 +50,26 @@
   <div class="cdb-grid">
     {% for sp in upcoming %}
       <a class="cdb-card" href="{% url 'species_detail' sp.slug %}">
-        <img class="cdb-img" src="{{ sp.cover_image.url }}" alt="{{ sp.scientific_name }}">
+
+        {% if sp.static_image %}
+          <img class="cdb-img"
+               src="{% static sp.static_image %}"
+               alt="{{ sp.scientific_name }}">
+        {% elif sp.cover_image and sp.cover_image.name %}
+          <img class="cdb-img"
+               src="{{ sp.cover_image.url }}"
+               alt="{{ sp.scientific_name }}">
+        {% else %}
+          <img class="cdb-img"
+               src="{% static 'species/placeholder.jpg' %}"
+               alt="No image">
+        {% endif %}
+
         <div class="cdb-card-body">
           <div class="cdb-title">{{ sp.scientific_name }}</div>
-          {% if sp.common_name %}<div class="cdb-sub">{{ sp.common_name }}</div>{% endif %}
+          {% if sp.common_name %}
+            <div class="cdb-sub">{{ sp.common_name }}</div>
+          {% endif %}
         </div>
       </a>
     {% empty %}
@@ -49,10 +81,26 @@
   <div class="cdb-grid">
     {% for sp in public %}
       <a class="cdb-card" href="{% url 'species_detail' sp.slug %}">
-        <img class="cdb-img" src="{{ sp.cover_image.url }}" alt="{{ sp.scientific_name }}">
+
+        {% if sp.static_image %}
+          <img class="cdb-img"
+               src="{% static sp.static_image %}"
+               alt="{{ sp.scientific_name }}">
+        {% elif sp.cover_image and sp.cover_image.name %}
+          <img class="cdb-img"
+               src="{{ sp.cover_image.url }}"
+               alt="{{ sp.scientific_name }}">
+        {% else %}
+          <img class="cdb-img"
+               src="{% static 'species/placeholder.jpg' %}"
+               alt="No image">
+        {% endif %}
+
         <div class="cdb-card-body">
           <div class="cdb-title">{{ sp.scientific_name }}</div>
-          {% if sp.common_name %}<div class="cdb-sub">{{ sp.common_name }}</div>{% endif %}
+          {% if sp.common_name %}
+            <div class="cdb-sub">{{ sp.common_name }}</div>
+          {% endif %}
         </div>
       </a>
     {% empty %}
@@ -78,4 +126,3 @@
   .cdb-sub{opacity:0.75;font-size:13px;margin-top:4px;}
 </style>
 {% endblock %}
-
