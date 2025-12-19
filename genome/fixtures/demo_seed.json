@@ -1,0 +1,104 @@
+[
+{
+  "model": "genome.species",
+  "pk": 1,
+  "fields": {
+    "scientific_name": "Podabacia crustacea",
+    "common_name": "",
+    "slug": "podabacia-crustacea",
+    "cover_image": "species/covers/cbfe5fd480d54373fd63465bbf1d5f5f.jpeg",
+    "static_image": "species/podabacia_crustacea.jpg",
+    "short_desc": "",
+    "kingdom": "Metazoa",
+    "phylum": "Cnidaria",
+    "class_name": "Anthozoa",
+    "order": "Scleractinia",
+    "family": "Fungiidae",
+    "genus": "Podabacia",
+    "ncbi_url": "",
+    "worms_url": "",
+    "group": "best",
+    "is_public": true
+  }
+},
+{
+  "model": "genome.species",
+  "pk": 2,
+  "fields": {
+    "scientific_name": "Tubastraea coccinea",
+    "common_name": "",
+    "slug": "tubastraea_coccinea",
+    "cover_image": "",
+    "static_image": "species/tubastraea_coccinea.jpg",
+    "short_desc": "",
+    "kingdom": "Metazoa",
+    "phylum": "Cnidaria",
+    "class_name": "Anthozoa",
+    "order": "Scleractinia",
+    "family": "Dendrophylliidae",
+    "genus": "Tubastraea",
+    "ncbi_url": "",
+    "worms_url": "",
+    "group": "best",
+    "is_public": true
+  }
+},
+{
+  "model": "genome.species",
+  "pk": 3,
+  "fields": {
+    "scientific_name": "Acropora intermedia",
+    "common_name": "",
+    "slug": "acropora_intermedia",
+    "cover_image": "",
+    "static_image": "species/acropora_intermedia.jpg",
+    "short_desc": "",
+    "kingdom": "Metazoa",
+    "phylum": "Cnidaria",
+    "class_name": "Anthozoa",
+    "order": "Scleractinia",
+    "family": "Acroporidae",
+    "genus": "Acropora",
+    "ncbi_url": "",
+    "worms_url": "",
+    "group": "best",
+    "is_public": true
+  }
+},
+{
+  "model": "genome.resourcefile",
+  "pk": 1,
+  "fields": {
+    "species": 1,
+    "label": "Genome(FASTA)",
+    "file": "species/resources/podabacia_crustacea.fa.docx",
+    "file_type": "fasta",
+    "version": "1.0",
+    "created_at": "2025-12-16T07:56:04.892Z"
+  }
+},
+{
+  "model": "genome.resourcefile",
+  "pk": 2,
+  "fields": {
+    "species": 2,
+    "label": "Genome(FASTA)",
+    "file": "species/resources/tubastraea_coccinea.fa.docx",
+    "file_type": "fasta",
+    "version": "1.0",
+    "created_at": "2025-12-19T02:23:21.349Z"
+  }
+},
+{
+  "model": "genome.resourcefile",
+  "pk": 3,
+  "fields": {
+    "species": 3,
+    "label": "Genome(FASTA)",
+    "file": "species/resources/tubastraea_coccinea.fa_kMCiO0f.docx",
+    "file_type": "fasta",
+    "version": "1.0",
+    "created_at": "2025-12-19T02:25:03.080Z"
+  }
+}
+]
