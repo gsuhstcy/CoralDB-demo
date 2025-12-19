@@ -9,14 +9,22 @@
   <a href="{% url 'home' %}">← Back to Home</a>
 
   <div class="cdb-header">
-    <img class="cdb-cover" src="{{ sp.cover_image.url }}" alt="{{ sp.scientific_name }}">
+
+    {% if sp.static_image %}
+      <img class="cdb-cover" src="{% static sp.static_image %}" alt="{{ sp.scientific_name }}">
+    {% elif sp.cover_image and sp.cover_image.name %}
+      <img class="cdb-cover" src="{{ sp.cover_image.url }}" alt="{{ sp.scientific_name }}">
+    {% else %}
+      <img class="cdb-cover" src="{% static 'species/placeholder.jpg' %}" alt="No image">
+    {% endif %}
+
     <div class="cdb-headinfo">
       <h1 class="cdb-h1">{{ sp.scientific_name }}</h1>
       {% if sp.common_name %}<p class="cdb-muted">{{ sp.common_name }}</p>{% endif %}
 
       <div class="cdb-links">
-        {% if sp.ncbi_url %}<a href="{{ sp.ncbi_url }}" target="_blank">NCBI</a>{% endif %}
-        {% if sp.worms_url %}<a href="{{ sp.worms_url }}" target="_blank">WoRMS</a>{% endif %}
+        {% if sp.ncbi_url %}<a href="{{ sp.ncbi_url }}" target="_blank" rel="noopener">NCBI</a>{% endif %}
+        {% if sp.worms_url %}<a href="{{ sp.worms_url }}" target="_blank" rel="noopener">WoRMS</a>{% endif %}
       </div>
     </div>
   </div>
