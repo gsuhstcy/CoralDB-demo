@@ -1,0 +1,331 @@
+.topnav {
+  background: #9ec1e6; /* 类似截图的浅蓝 */
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.topnav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-link {
+  color: #0b2540;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1;
+  padding: 8px 2px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+.nav-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.nav-search input {
+  border: 0;
+  outline: 0;
+  padding: 10px 12px;
+  width: 220px;
+  font-size: 16px;
+}
+
+.nav-search button {
+  border: 0;
+  background: transparent;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body {
+  background: #f2f6fb;
+}
+/* ===== Top Navigation ===== */
+.topnav {
+  background: #2f6fae;           /* 海洋蓝 */
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.topnav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  padding: 4px 0;
+  opacity: 1;
+  letter-spacing: 0.06em;
+  transition: opacity 0.2s ease;
+}
+
+/* hover 时更亮 */
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* 当前页面（Home） */
+.nav-link.active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* hover 下划线动画 */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== Card Hover Effect ===== */
+.cdb-card {
+  background: #ffffff;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 悬浮时 */
+.cdb-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+/* ===== Banner ===== */
+.banner {
+  width: 100%;
+  max-height: 220px;      /* 控制高度，可调 */
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.banner img {
+  width: 100%;
+  height: 220px;          /* 和上面一致 */
+  object-fit: cover;      /* 不变形裁切 */
+  display: block;
+}
+ /* ===== Home Search Center ===== */
+.cdb-top {
+  display: flex;
+  justify-content: center;   /* 水平居中 */
+  flex-direction: column; 
+  margin: 5px 0 40px;       /* 上下留白 */
+}
+ /* 搜索框整体 */
+.cdb-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 输入框 */
+.cdb-search input {
+  width: 920px;              /* 变宽 */
+  padding: 14px 18px;        /* 变高 */
+  font-size: 18px;           /* 字变大 */
+  border-radius: 10px;
+  border: 1px solid #cfd8e3;
+  outline: none;
+}
+
+/* 点击时 */
+.cdb-search input:focus {
+  border-color: #2f6fae;
+  box-shadow: 0 0 0 3px rgba(47,111,174,0.2);
+}
+
+/* 按钮 */
+.cdb-search button {
+  padding: 14px 22px;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  background: #2f6fae;
+  color: #ffffff;
+  cursor: pointer;
+}
+/* ===== Home Project Intro ===== */
+.cdb-intro {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.cdb-project-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #0b2540;
+}
+
+.cdb-project-desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #4a5d73;
+  margin-bottom: 10px;
+}
+/* ===== Footer ===== */
+.cdb-footer {
+  background: #2f6fae;
+  color: #dddddd;
+  margin-top: 80px;
+}
+
+.cdb-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.cdb-footer-block h4 {
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.cdb-footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cdb-footer-block li {
+  margin-bottom: 8px;
+}
+
+.cdb-footer-block a {
+  color: #ffffff;          /* 类似你图里的红色链接 */
+  text-decoration: none;
+  text-align: center; 
+  font-size: 18px;
+}
+
+/* Footer email spacing */
+/* ===== Footer Email (force center) ===== */
+.footer-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* 👈 整块居中 */
+  text-align: center;
+}
+
+.footer-email-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* 👈 每一行居中 */
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.email-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 👈 图标 + 邮箱整体居中 */
+  gap: 6px;
+  font-size: 16px;         /* 邮箱字号 */
+}
+
+.footer-email a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-email a:hover {
+  text-decoration: underline;
+}
+
+ /* ===== Footer Logos ===== */
+.cdb-footer-logos {
+  margin-top: 10px;
+  align-items: center;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 10px;          /* 控制 logo 统一高度 */
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-logos img:hover {
+  opacity: 1;
+  transform: translateY(-2px);   /* 轻微浮起 */
+}
+
+/* ===== Center Partners title + logos ===== */
+.cdb-footer-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 👈 关键：标题 + logo 全部居中 */
+  text-align: center;
+}
+
+/* 关键：强制所有logo按高度显示，避免原图太大撑爆footer */
+.footer-logos img{
+  height:46px;      /* 想更大：56px；想更小：40px */
+  width:auto;
+  max-width:180px;  /* 防止过长logo */
+  display:block;
+  object-fit:contain;
+  opacity:0.95;
+}
+
+.footer-logos a:hover img{
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+/* ===== Footer titles: bigger & bolder ===== */
+.cdb-footer h4 {
+  font-size: 25px;        /* 标题更大 */
+  font-weight: 800;       /* 更粗 */
+  letter-spacing: 0.04em; /* 字距更稳重（可选） */
+  margin-bottom: 14px;
+  color: #ffffff;
+}

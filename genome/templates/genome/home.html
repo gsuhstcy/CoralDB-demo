@@ -6,14 +6,35 @@
 {% block content %}
 <div class="cdb-container">
 
-  <div class="cdb-top">
-    <h1 class="cdb-h1">CoralDB</h1>
+<div class="cdb-top">
 
-    <form method="get" class="cdb-search">
-      <input name="q" value="{{ q }}" placeholder="Search species..." />
-      <button type="submit">Search</button>
-    </form>
+  <div class="cdb-intro">
+    <h2 class="cdb-project-title">CoralExplorer (Coral10k) Project</h2>
+
+    <p class="cdb-project-desc">
+      Establishing a multi-scale omics data resource spanning
+      <strong>“genomes–cellular expression–environmental responses”</strong>
+      to explore the evolution of biological complexity in corals.
+    </p>
+
+    <p class="cdb-project-desc">
+      The CoralExplorer project aims to build high-quality genome resources and
+      single-cell transcriptomic atlases spanning diverse phylogenetic lineages
+      of stony corals, providing a unified data foundation for dissecting coral
+      biological complexity and addressing key evolutionary questions. The
+      knowledge generated will support coral reef conservation and restoration,
+      coral aquaculture and breeding, and biomineralization-inspired marine
+      biomaterials.
+    </p>
   </div>
+
+  <form method="get" class="cdb-search">
+    <input name="q" value="{{ q }}" placeholder="Search species..." />
+    <button type="submit">Search</button>
+  </form>
+
+</div>
+
 
   <h2 class="cdb-h2">Best genomes</h2>
   <div class="cdb-grid">

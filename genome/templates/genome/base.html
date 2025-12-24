@@ -1,23 +1,79 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>CoralDB - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
-    <!-- 顶部标题 -->
-    <header>
-        <h1>CoralDB</h1>
-        <nav>
-            <a href="{% url 'home' %}">Home</a> |
-        </nav>
-        <hr>
-    </header>
 
-    <!-- 每个页面自己的内容 -->
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+<body>
+
+<header>
+    <div class="banner">
+    <img src="{% static 'images/coraldbbanner.jpg' %}" alt="CoralDB banner">
+</div>
+
+
+    <nav class="topnav">
+        <div class="topnav-inner">
+            <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-link" href="{% url 'publications' %}">Publications</a>
+            <a class="nav-link" href="{% url 'genome_data' %}">Genome data</a>
+            <a class="nav-link" href="{% url 'blast' %}">BLAST</a>
+            <a class="nav-link" href="{% url 'additional_resources' %}">Additional resources</a>
+            <a class="nav-link" href="{% url 'help' %}">Help</a>
+        </div>
+    </nav>
+
+    <hr>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="cdb-footer">
+<div class="cdb-footer-block footer-email">
+  <h4>Contact</h4>
+
+  <div class="footer-email-list">
+    <div class="email-item">
+      📧 <a href="mailto:hanwentao@ouc.edu.cn">hanwentao@ouc.edu.cn</a>
+    </div>
+    <div class="email-item">
+      📧 <a href="mailto:chenxiaomei@ouc.edu.cn">chenxiaomei@ouc.edu.cn</a>
+    </div>
+    <div class="email-item">
+      📧 <a href="mailto:tangcaiyin8011@ouc.edu.cn">tangcaiyin8011@ouc.edu.cn</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- 右侧：Contact -->
+    <div class="cdb-footer-block cdb-footer-logos">
+  <h4>Partners</h4>
+
+  <div class="footer-logos">
+    <a href="https://www.ouc.edu.cn/" target="_blank" rel="noopener">
+      <img src="{% static 'images/zghydx.png' %}" alt="Ocean University of China">
+    </a>
+
+    <a href="http://soi.ouc.edu.cn/" target="_blank" rel="noopener">
+      <img src="{% static 'images/syhysys.png' %}" alt="Institute of Oceanology (OUC)">
+    </a>
+
+    <a href="https://www.sml-zhuhai.cn/" target="_blank" rel="noopener">
+      <img src="{% static 'images/gzsys.png' %}" alt="Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai)">
+    </a>
+  </div>
+</div>
+
+  </div>
+
+</footer>
+
 </body>
 </html>
-

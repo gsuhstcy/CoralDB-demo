@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import FileResponse, Http404
 from .models import Species, ResourceFile
-
+from django.shortcuts import render
 
 def home(request):
     q = request.GET.get("q", "").strip()
@@ -43,3 +43,12 @@ from django.http import HttpResponse
 
 def placeholder(request, name):
     return HttpResponse(f"<h1>{name}</h1><p>Placeholder page. Coming soon.</p>")
+
+
+def about(request): return render(request, "genome/about.html")
+def publications(request): return render(request, "genome/publications.html")
+def genome_data(request): return render(request, "genome/genome_data.html")
+def blast(request): return render(request, "genome/blast.html")
+def additional_resources(request): return render(request, "genome/resources.html")
+def help_page(request): return render(request, "genome/help.html")
+def species_search(request): return render(request, "genome/species_search.html")
