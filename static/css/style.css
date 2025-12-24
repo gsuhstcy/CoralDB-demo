@@ -241,28 +241,33 @@ body {
 }
 
 /* Footer email spacing */
-/* ===== Footer Email (force center) ===== */
+/* ===== Footer Email (force center) ===== *//* ===== Footer email inline ===== */
 .footer-email {
   display: flex;
   flex-direction: column;
-  align-items: center;     /* 👈 整块居中 */
+  align-items: center;
   text-align: center;
 }
 
-.footer-email-list {
+.footer-email-inline {
   display: flex;
-  flex-direction: column;
-  align-items: center;     /* 👈 每一行居中 */
+  align-items: center;
+  justify-content: center;   /* 👈 整排居中 */
   gap: 8px;
   margin-top: 6px;
+  flex-wrap: wrap;           /* 屏幕窄时自动换行 */
 }
 
 .email-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center; /* 👈 图标 + 邮箱整体居中 */
   gap: 6px;
-  font-size: 16px;         /* 邮箱字号 */
+  font-size: 15px;           /* 稍微小一点，footer 更紧凑 */
+}
+
+.email-sep {
+  opacity: 0.6;
+  font-size: 14px;
 }
 
 .footer-email a {
@@ -272,31 +277,6 @@ body {
 
 .footer-email a:hover {
   text-decoration: underline;
-}
-
- /* ===== Footer Logos ===== */
-.cdb-footer-logos {
-  margin-top: 10px;
-  align-items: center;
-}
-
-.footer-logos {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.footer-logos img {
-  height: 10px;          /* 控制 logo 统一高度 */
-  opacity: 0.85;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.footer-logos img:hover {
-  opacity: 1;
-  transform: translateY(-2px);   /* 轻微浮起 */
 }
 
 /* ===== Center Partners title + logos ===== */
@@ -328,4 +308,84 @@ body {
   letter-spacing: 0.04em; /* 字距更稳重（可选） */
   margin-bottom: 14px;
   color: #ffffff;
+}
+/* =========================
+   Footer (compact, 2 blocks)
+   ========================= */
+
+.cdb-footer{
+  background:#2f6fae;      /* 跟导航一致 */
+  color:#fff;
+  margin-top:40px;         /* 变窄：减少外边距 */
+}
+
+.cdb-footer-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px 20px;       /* 变窄：减少内边距(高度关键) */
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:28px;
+  flex-wrap:wrap;          /* 小屏自动换行 */
+}
+
+/* 只让标题和内容居中，不要影响 logo 内部排列 */
+.cdb-footer-block{
+  text-align:center;
+}
+
+/* 标题更大更粗 */
+.cdb-footer h4{
+  margin:0 0 6px;          /* 变窄：标题下间距缩小 */
+  font-size:18px;
+  font-weight:800;
+  color:#fff;
+  letter-spacing:0.04em;
+}
+
+/* Email 一排 */
+.footer-email-inline{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.email-item{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:15px;          /* 不要太大，否则 footer 会变高 */
+  line-height:1.2;
+}
+
+.email-sep{
+  opacity:0.7;
+}
+
+/* footer 里所有链接白色 */
+.cdb-footer a{
+  color:#fff;
+  text-decoration:none;
+}
+.cdb-footer a:hover{
+  text-decoration:underline;
+}
+
+/* Logos 必须横排（防止变成一列） */
+.footer-logos{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.footer-logos img{
+  height:34px;             /* 变窄：logo 稍小一点 */
+  width:auto;
+  object-fit:contain;
+  display:block;
 }
